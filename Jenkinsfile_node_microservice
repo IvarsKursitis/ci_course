@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    triggers {
+        pollSCM('*/1 * * * *')
+    }
+    stages { 
+        stage('build') {
+            steps {
+                echo "Building node application"
+            }
+        }
+        stage('deploy-dev') {
+            steps {
+                echo "Deplaying to DEV"
+            }
+        }
+        stage('deploy-int') {
+            steps {
+                echo "Testing on DEV"
+            }
+        }
+        stage('test-int') {
+            steps {
+                echo "Testing on DEV"
+            }
+        }
+        stage('deploy-prd') {
+            steps {
+                echo "Testing on DEV"
+            }
+        }
+        stage('test-prd') {
+            steps {
+                echo "Testing on DEV"
+            }
+        }
+    }
+}
