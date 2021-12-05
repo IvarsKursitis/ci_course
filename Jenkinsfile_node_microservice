@@ -14,24 +14,29 @@ pipeline {
                 echo "Deplaying to DEV"
             }
         }
+        stage('test-dev') {
+            steps {
+                echo "Testing DEV"
+            }
+        }
         stage('deploy-int') {
             steps {
-                echo "Testing on DEV"
+                echo "Deplying INT"
             }
         }
         stage('test-int') {
             steps {
-                echo "Testing on DEV"
+                echo "Testing INT"
             }
         }
         stage('deploy-prd') {
             steps {
-                echo "Testing on DEV"
+                echo "Deploying PRD"
             }
         }
         stage('test-prd') {
             steps {
-                echo "Testing on DEV"
+                echo "Testing on PRD"
             }
         }
     }
