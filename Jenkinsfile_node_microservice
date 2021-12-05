@@ -12,42 +12,42 @@ pipeline {
         stage('deploy-dev') {
             steps {
                 script {
-                    deploy("DEV")
+                    deploy("dev")
                 }
             }
         }
         stage('test-dev') {
             steps {
                 script {
-                    test("DEV")
+                    test("dev")
                 }
             }
         }
         stage('deploy-int') {
             steps {
                 script {
-                    deploy("INT")
+                    deploy("int")
                 }
             }
         }
         stage('test-int') {
             steps {
                 script {
-                    test("INT")
+                    test("int")
                 }
             }
         }
         stage('deploy-prd') {
             steps {
                 script {
-                    deploy("PRD")
+                    deploy("prd")
                 }
             }
         }
         stage('test-prd') {
             steps {
                 script {
-                    test("PRD")
+                    test("prd")
                 }
             }
         }
